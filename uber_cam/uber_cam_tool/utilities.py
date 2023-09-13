@@ -15,6 +15,15 @@ def get_frame_range(camera, camera_dict):
 
 
 def check_frame_overlaps(selected_camera, camera_dict, frame_in, frame_out):
+    """
+    Checking if user entered frames overlap at any point
+    :param selected_camera:
+    :param camera_dict:
+    :param frame_in:
+    :param frame_out:
+    :rtype list
+    :return warnings:
+    """
     warnings = []
     for k, v in camera_dict.items():
         if k != selected_camera:

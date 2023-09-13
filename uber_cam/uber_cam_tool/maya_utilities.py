@@ -48,6 +48,12 @@ def get_keyframes(camera_dict):
 
 
 def set_keyframes(camera, dict_frames):
+    """
+    Set keyframes on uber camera from our created dict_frames
+    :param camera:
+    :param dict_frames:
+    :return:
+    """
     for frame, attrs in dict_frames.items():
         cmds.setKeyframe(camera, attribute='translateX', t=frame, value=attrs[0])
         cmds.setKeyframe(camera, attribute='translateY', t=frame, value=attrs[1])
